@@ -1,0 +1,45 @@
+{
+  "name": "northcreationagency/silverstripe-seohelpers",
+  "description": "SEO helpers for the SEO module Quinn-Interactive/silverstripe-seo",
+  "type": "silverstripe-vendormodule",
+  "homepage": "https://github.com/northcreation-agency/silverstripe-seohelpers",
+  "keywords": [
+    "silverstripe",
+    "4",
+    "seo",
+    "yml"
+  ],
+  "authors": [
+    {
+      "name": "Herbert Cuba Garcia",
+      "email": "herbert@northcreation.agency"
+    }
+  ],
+  "license": "BSD-3-Clause",
+  "support": {
+    "issues": "https://github.com/northcreation-agency/silverstripe-seohelpers/issues"
+  },
+  "require": {
+    "silverstripe/cms": "^4.3",
+    "silverstripe/framework": "^4.3",
+    "Quinn-Interactive/silverstripe-seo": "^1.0.6"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^5.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "NorthCreationAgency\\SilverStripeLingo\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "NorthCreationAgency\\SilverStripeLingo\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "installer-name": "seohelpers"
+  },
+  "prefer-stable": true,
+  "minimum-stability": "dev"
+}
