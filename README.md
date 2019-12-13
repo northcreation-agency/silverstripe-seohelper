@@ -1,6 +1,11 @@
-# silverstripe-seo
+# SEO Helpers for Silverstripe-SEO
 
-Helper extensions to make Silverstripe-SEO easier to work with in regards to images and canonical settings
+Helper extensions to make Silverstripe-SEO easier to work with in regards to images and canonical settings.
+Install with Composer:
+```html
+composer require northcreation-agency/silverstripe-seohelpers
+```
+
 
 **Note:** This module requires Quinn-Interactive/silverstripe-seo ~ 1.0.6  (which replaces version 1.0.3 of `vulcandigital/silverstripe-seo`.)
 
