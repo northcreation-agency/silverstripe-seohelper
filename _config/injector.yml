@@ -1,0 +1,10 @@
+---
+Name: kbseo-injectors
+Before: '#silverstripe-seo'
+---
+SilverStripe\Core\Injector\Injector:
+  Vulcan\Seo\Extensions\PageSeoExtension:
+    class: KB\SEOHelpers\KBPageSeoExtension
+  Vulcan\Seo\Seo:
+    class: KB\SEOHelpers\SeoInjector
+

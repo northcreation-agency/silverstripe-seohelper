@@ -1,0 +1,7 @@
+---
+Name: kbseo-extensions
+Before: '#silverstripe-seo'
+---
+Silverstripe\SiteConfig\SiteConfig:
+  extensions:
+    - KB\SEOHelpers\SEOSiteConfig
