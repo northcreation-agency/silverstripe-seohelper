@@ -58,7 +58,12 @@ class SeoInjector extends Seo
         $generator->setImageUrl(($OGImage->exists()) ? $OGImage->AbsoluteLink() : null);
         $generator->setImageDimensions($imageWidth, $imageHeight);
         $generator->setType($owner->FacebookPageType ?: 'website');
-        $generator->setUrl($owner->OGUrl() ?: $owner->AbsoluteLink());
+        if (method_exists($owner, 'OGUrl')) {
+            $generator->setUrl($owner->OGUrl() ?: $owner->AbsoluteLink());
+        }
+        else {
+            $generator->setUrl($owner->AbsoluteLink());
+        }
 
         return $generator->process();
     }
