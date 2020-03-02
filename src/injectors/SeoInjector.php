@@ -35,18 +35,6 @@ class SeoInjector extends Seo
         return [];
     }
 
-    public function getOGTitle() {
-        if () {
-            return $owner->OGTitle();
-        }
-        if ($owner->FacebookPageTitle) {
-            return ;
-        }
-        if ($owner->Title) {
-            return 
-        }
-    }
-
     /**
      * Creates the Facebook/OpenGraph meta tags
      *
