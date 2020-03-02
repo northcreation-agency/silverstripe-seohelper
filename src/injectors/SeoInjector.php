@@ -53,7 +53,12 @@ class SeoInjector extends Seo
         $imageHeight = $OGImage->exists() ? $OGImage->getHeight() : null;
 
         $generator = FacebookMetaGenerator::create();
-        $generator->setTitle($owner->FacebookPageTitle ?: $owner->Title);
+        if (method_exists($owner, 'OGTitle')) {
+            $generator->setTitle($owner->OGTitle() ?: $owner->FacebookPageTitle ?: $owner->Title);
+        }
+        else {
+            $generator->setTitle($owner->FacebookPageTitle ?: $owner->Title);
+        }
         $generator->setDescription($owner->FacebookPageDescription ?: $owner->MetaDescription ?: $owner->Content);
         $generator->setImageUrl(($OGImage->exists()) ? $OGImage->AbsoluteLink() : null);
         $generator->setImageDimensions($imageWidth, $imageHeight);
