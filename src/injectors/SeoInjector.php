@@ -60,7 +60,7 @@ class SeoInjector extends Seo
             $generator->setTitle($owner->FacebookPageTitle ?: $owner->Title);
         }
         $generator->setDescription($owner->FacebookPageDescription ?: $owner->MetaDescription ?: $owner->Content);
-        $generator->setImageUrl(($OGImage->exists()) ? $OGImage->AbsoluteLink() : null);
+        $generator->setImageUrl(($OGImage->exists()) ? $OGImage->AbsoluteURL : null);
         $generator->setImageDimensions($imageWidth, $imageHeight);
         $generator->setType($owner->FacebookPageType ?: 'website');
         if (method_exists($owner, 'OGUrl')) {
