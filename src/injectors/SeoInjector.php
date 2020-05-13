@@ -4,8 +4,8 @@ namespace KB\SEOHelpers;
 
 use function get_class;
 use SilverStripe\Core\Config\Config;
-use Vulcan\Seo\Seo;
-use Vulcan\Seo\Builders\FacebookMetaGenerator;
+use QuinnInteractive\Seo\Seo;
+use QuinnInteractive\Seo\Builders\FacebookMetaGenerator;
 
 /**
  * Created by PhpStorm.

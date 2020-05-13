@@ -3,8 +3,8 @@ Name: kbseo-injectors
 Before: '#silverstripe-seo'
 ---
 SilverStripe\Core\Injector\Injector:
-  Vulcan\Seo\Extensions\PageSeoExtension:
+  QuinnInteractive\Seo\Extensions\PageSeoExtension:
     class: KB\SEOHelpers\KBPageSeoExtension
-  Vulcan\Seo\Seo:
+  QuinnInteractive\Seo\Seo:
     class: KB\SEOHelpers\SeoInjector
 
