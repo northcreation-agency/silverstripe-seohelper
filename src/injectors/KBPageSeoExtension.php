@@ -4,8 +4,8 @@ use SilverStripe\Assets\Image;
 use SilverStripe\Core\Config\Config;
 use SilverStripe\ORM\ArrayList;
 use SilverStripe\SiteConfig\SiteConfig;
-use Vulcan\Seo\Extensions\PageSeoExtension;
-use Vulcan\Seo\Seo;
+use QuinnInteractive\Seo\Extensions;
+use QuinnInteractive\Seo\Seo;
 
 /**
  * Created by PhpStorm.
