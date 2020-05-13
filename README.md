@@ -13,6 +13,7 @@ composer require northcreation-agency/silverstripe-seohelpers
 
 * Option to set the OG:image per page type and a fallback on siteconfig if none is set
 * Option to disable canonical links
+* Option to specify OG:url (Defaults to AbsoluteLink())
 
 ### Example 
 
@@ -27,6 +28,14 @@ In order to show a page header image as default OG:image, add this method to you
 public function DefaultOGImage()
 {
     return $this->HeaderImage();
+}
+```
+
+In order to specify OG:url, add this method to your Page type:
+```html
+public function OGUrl()
+{
+    return 'https://example.com/;
 }
 ```
 

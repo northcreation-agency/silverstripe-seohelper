@@ -4,6 +4,7 @@ use SilverStripe\Assets\Image;
 use SilverStripe\Core\Config\Config;
 use SilverStripe\ORM\ArrayList;
 use SilverStripe\SiteConfig\SiteConfig;
+
 use QuinnInteractive\Seo\Extensions\PageSeoExtension;
 use QuinnInteractive\Seo\Seo;
 
