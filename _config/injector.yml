@@ -4,7 +4,7 @@ Before: '#silverstripe-seo'
 ---
 SilverStripe\Core\Injector\Injector:
   QuinnInteractive\Seo\Extensions\PageSeoExtension:
-    class: NorthCreationAgency\SEOHelper\KBPageSeoExtension
+    class: NorthCreationAgency\SEOHelper\NCAPageSeoExtension
   QuinnInteractive\Seo\Seo:
     class: NorthCreationAgency\SEOHelper\SeoInjector
 

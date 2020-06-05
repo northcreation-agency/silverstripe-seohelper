@@ -15,7 +15,7 @@ use QuinnInteractive\Seo\Seo;
  * Time: 17:45
  */
 
-class KBPageSeoExtension extends PageSeoExtension
+class NCAPageSeoExtension extends PageSeoExtension
 {
     private static $use_siteconfig_default = true;
     //default image to show, this should be overwritten by the different page types on what to use

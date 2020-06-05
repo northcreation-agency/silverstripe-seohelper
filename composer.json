@@ -20,6 +20,8 @@
     "issues": "https://github.com/northcreation-agency/silverstripe-seohelper/issues"
   },
   "require": {
+    "silverstripe/framework": "^4",
+    "silverstripe/cms": "^4",
     "quinninteractive/silverstripe-seo": "1.0.10"
   },
   "require-dev": {
@@ -27,16 +29,16 @@
   },
   "autoload": {
     "psr-4": {
-      "NorthCreationAgency\\SilverStripeSEOHelpers\\": "src/"
+      "NorthCreationAgency\\SilverStripeSEOHelper\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "NorthCreationAgency\\SilverStripeSEOHelpers\\Tests\\": "tests/"
+      "NorthCreationAgency\\SilverStripeSEOHelper\\Tests\\": "tests/"
     }
   },
   "extra": {
-    "installer-name": "seohelpers"
+    "installer-name": "seohelper"
   },
   "prefer-stable": true,
   "minimum-stability": "dev"
