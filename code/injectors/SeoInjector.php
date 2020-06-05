@@ -1,6 +1,6 @@
 <?php
 
-namespace KB\SEOHelpers;
+namespace NorthCreationAgency\SEOHelper;
 
 use function get_class;
 use SilverStripe\Core\Config\Config;

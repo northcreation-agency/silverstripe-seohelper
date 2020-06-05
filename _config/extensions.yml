@@ -1,7 +1,7 @@
 ---
-Name: kbseo-extensions
+Name: northcreationagency-seoextensions
 Before: '#silverstripe-seo'
 ---
 Silverstripe\SiteConfig\SiteConfig:
   extensions:
-    - KB\SEOHelpers\SEOSiteConfig
+    - NorthCreationAgency\SEOHelper\SEOSiteConfig

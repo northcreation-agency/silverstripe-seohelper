@@ -1,5 +1,5 @@
 <?php
-namespace KB\SEOHelpers;
+namespace NorthCreationAgency\SEOHelper;
 use SilverStripe\Assets\Image;
 use SilverStripe\Core\Config\Config;
 use SilverStripe\ORM\ArrayList;

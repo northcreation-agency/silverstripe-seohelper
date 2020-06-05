@@ -1,10 +1,10 @@
 ---
-Name: kbseo-injectors
+Name: northcreationagency-seoinjectors
 Before: '#silverstripe-seo'
 ---
 SilverStripe\Core\Injector\Injector:
   QuinnInteractive\Seo\Extensions\PageSeoExtension:
-    class: KB\SEOHelpers\KBPageSeoExtension
+    class: NorthCreationAgency\SEOHelper\KBPageSeoExtension
   QuinnInteractive\Seo\Seo:
-    class: KB\SEOHelpers\SeoInjector
+    class: NorthCreationAgency\SEOHelper\SeoInjector
 
