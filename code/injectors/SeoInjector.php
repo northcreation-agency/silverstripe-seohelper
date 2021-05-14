@@ -49,8 +49,8 @@ class SeoInjector extends Seo
         } else {
             $OGImage = $owner->DefaultOGImage();
         }
-        $imageWidth = $OGImage->exists() ? $OGImage->getWidth() : null;
-        $imageHeight = $OGImage->exists() ? $OGImage->getHeight() : null;
+        $imageWidth = $OGImage && $OGImage->exists() ? $OGImage->getWidth() : null;
+        $imageHeight = $OGImage && $OGImage->exists() ? $OGImage->getHeight() : null;
 
         $generator = FacebookMetaGenerator::create();
         if (method_exists($owner, 'OGTitle')) {
@@ -60,7 +60,7 @@ class SeoInjector extends Seo
             $generator->setTitle($owner->FacebookPageTitle ?: $owner->Title);
         }
         $generator->setDescription($owner->FacebookPageDescription ?: $owner->MetaDescription ?: $owner->Content);
-        $generator->setImageUrl(($OGImage->exists()) ? $OGImage->AbsoluteURL : null);
+        $generator->setImageUrl(($OGImage && $OGImage->exists()) ? $OGImage->AbsoluteURL : null);
         $generator->setImageDimensions($imageWidth, $imageHeight);
         $generator->setType($owner->FacebookPageType ?: 'website');
         if (method_exists($owner, 'OGUrl')) {
