@@ -1,11 +1,11 @@
 <?php
 
-namespace KB\SEOHelpers;
+namespace NorthCreationAgency\SEOHelper;
 
 use function get_class;
 use SilverStripe\Core\Config\Config;
-use Vulcan\Seo\Seo;
-use Vulcan\Seo\Builders\FacebookMetaGenerator;
+use QuinnInteractive\Seo\Seo;
+use QuinnInteractive\Seo\Builders\FacebookMetaGenerator;
 
 /**
  * Created by PhpStorm.
@@ -49,8 +49,8 @@ class SeoInjector extends Seo
         } else {
             $OGImage = $owner->DefaultOGImage();
         }
-        $imageWidth = $OGImage->exists() ? $OGImage->getWidth() : null;
-        $imageHeight = $OGImage->exists() ? $OGImage->getHeight() : null;
+        $imageWidth = $OGImage && $OGImage->exists() ? $OGImage->getWidth() : null;
+        $imageHeight = $OGImage && $OGImage->exists() ? $OGImage->getHeight() : null;
 
         $generator = FacebookMetaGenerator::create();
         if (method_exists($owner, 'OGTitle')) {
@@ -60,7 +60,7 @@ class SeoInjector extends Seo
             $generator->setTitle($owner->FacebookPageTitle ?: $owner->Title);
         }
         $generator->setDescription($owner->FacebookPageDescription ?: $owner->MetaDescription ?: $owner->Content);
-        $generator->setImageUrl(($OGImage->exists()) ? $OGImage->AbsoluteURL : null);
+        $generator->setImageUrl(($OGImage && $OGImage->exists()) ? $OGImage->AbsoluteURL : null);
         $generator->setImageDimensions($imageWidth, $imageHeight);
         $generator->setType($owner->FacebookPageType ?: 'website');
         if (method_exists($owner, 'OGUrl')) {

@@ -1,5 +1,5 @@
 <?php
-namespace KB\SEOHelpers;
+namespace NorthCreationAgency\SEOHelper;
 use SilverStripe\ORM\DataExtension;
 
 // Custom fields

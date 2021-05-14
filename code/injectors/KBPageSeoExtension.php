@@ -1,11 +1,12 @@
 <?php
-namespace KB\SEOHelpers;
+namespace NorthCreationAgency\SEOHelper;
 use SilverStripe\Assets\Image;
 use SilverStripe\Core\Config\Config;
 use SilverStripe\ORM\ArrayList;
 use SilverStripe\SiteConfig\SiteConfig;
-use Vulcan\Seo\Extensions\PageSeoExtension;
-use Vulcan\Seo\Seo;
+
+use QuinnInteractive\Seo\Extensions\PageSeoExtension;
+use QuinnInteractive\Seo\Seo;
 
 /**
  * Created by PhpStorm.
@@ -14,7 +15,7 @@ use Vulcan\Seo\Seo;
  * Time: 17:45
  */
 
-class KBPageSeoExtension extends PageSeoExtension
+class NCAPageSeoExtension extends PageSeoExtension
 {
     private static $use_siteconfig_default = true;
     //default image to show, this should be overwritten by the different page types on what to use
