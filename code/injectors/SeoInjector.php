@@ -17,6 +17,31 @@ class SeoInjector extends Seo
 {
     private static $show_canonical = true;
 
+    /**
+     * Collates all content fields from {@link seoContentFields()} into a single string. Which makes it very important
+     * that the seoContentFields array is in the correct order as to which they display.
+     *
+     * @param \Page|PageHealthExtension $owner
+     *
+     * @return string
+     */
+    public static function collateContentFields($owner)
+    {
+        $contentFields = $owner->seoContentFields();
+
+        $content = [];
+        foreach ($contentFields as $field) {
+            $content[] = $owner->relObject($field)->forTemplate();
+        }
+
+        if ($owner->hasMethod('updateCollateContentFields')) {
+            $content = $owner->updateCollateContentFields($content);
+        }
+
+        $content = implode(' ', $content);
+
+        return strtolower(strip_tags($content));
+    }
 
     /**
      * Creates the canonical url link
