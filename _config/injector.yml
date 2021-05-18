@@ -7,4 +7,6 @@ SilverStripe\Core\Injector\Injector:
     class: NorthCreationAgency\SEOHelper\NCAPageSeoExtension
   QuinnInteractive\Seo\Seo:
     class: NorthCreationAgency\SEOHelper\SeoInjector
+  QuinnInteractive\Seo\Analysis\WordCountAnalysis:
+    class: NorthCreationAgency\SEOHelper\WordCountAnalysisInjector
 
